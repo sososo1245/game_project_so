@@ -7,25 +7,24 @@ public class ObjectManager : MonoBehaviour
     public GameObject BlueCirclePrefab;
     public GameObject RedCirclePrefab;
     public GameObject GreenSqurePrefab;
+    public GameObject EnemyPrefab;
 
     GameObject[] BlueCircle;
     GameObject[] RedCircle;
     GameObject[] GreenSqure;
 
     GameObject[] targetPool;
+    GameObject Enemy;
 
 
     void Awake()
     {
-
         BlueCircle = new GameObject[10];
         RedCircle = new GameObject[10];
         GreenSqure = new GameObject[10];
+        Enemy = new GameObject();
 
         Generate();
-
-
-
     }
 
     void Generate()
@@ -42,39 +41,6 @@ public class ObjectManager : MonoBehaviour
         {
             GreenSqure[index] = Instantiate(GreenSqurePrefab);
         }
-    }
-
-    public GameObject MakeObj(string type)
-    {
-        switch(type)
-        {
-            case "BlueCircle":
-                targetPool = BlueCircle;
-                break;
-            case "RedCircle":
-                targetPool = RedCircle;
-                break;
-            case "GreenSqure":
-                targetPool = GreenSqure;
-                break;
-
-        }
-
-        for (int index = 0; index < BlueCircle.Length; index++)
-        {
-
-            if (!targetPool[index].activeSelf)
-            {
-                targetPool[index].SetActive(true);
-
-
-            }
-        }
-
-        return null;     
-
-           
-        
-
+        Enemy = Instantiate(EnemyPrefab);
     }
 }
