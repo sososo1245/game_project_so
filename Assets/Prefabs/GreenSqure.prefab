@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: -256660399983134093}
   - component: {fileID: 5979555690685165854}
   - component: {fileID: -698421515541726583}
+<<<<<<< HEAD
   - component: {fileID: -4287628297446607866}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
   m_Layer: 6
   m_Name: GreenSqure
   m_TagString: Untagged
@@ -152,6 +155,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!114 &-4287628297446607866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,3 +168,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245c6b1d7c8e24ae7823bc7c62482fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38

@@ -234,6 +234,7 @@ Transform:
   m_Father: {fileID: 1015889103}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &120474599
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +632,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &708617973
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +745,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0.25
+<<<<<<< HEAD
 --- !u!1 &753264871
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +931,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &1015889102
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +967,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1021286358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1168,8 @@ Transform:
   m_Father: {fileID: 564958123}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &1204343029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1281,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1238410921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,6 +1477,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.106}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &1372715672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,7 +1615,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433601803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 3.81, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1625,7 +1641,10 @@ MonoBehaviour:
   BlueCirclePrefab: {fileID: 3603909515805173893, guid: 287a7e07a1f974c3c8423996401866c0, type: 3}
   RedCirclePrefab: {fileID: 7666473039926961069, guid: 45f5c727e1d664526a2c76fec4d3c863, type: 3}
   GreenSqurePrefab: {fileID: 8509608163622826838, guid: 764fef0a03009465191c7bcd4daed6d1, type: 3}
+<<<<<<< HEAD
   EnemyPrefab: {fileID: 3603909515805173893, guid: b987a1fd6656c41e38de0973ce1a0dda, type: 3}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &1454566603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,6 +1760,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1635633729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 993879273454447435, guid: ad6135e4c661f4b9bbc030d03055cde5, type: 3}
@@ -1776,6 +1796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hint: {fileID: 1238410921}
   btnHint: {fileID: 1635633731}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &1678658078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1882,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1699864174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +1999,8 @@ Transform:
   m_Father: {fileID: 564958123}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
 --- !u!1 &2008899626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,6 +2112,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &993879271822713098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2328,3 +2354,5 @@ PrefabInstance:
       objectReference: {fileID: 1678658080}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43cea5dfb27cf4fb0bd18b6fd0169a02, type: 3}
+=======
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38

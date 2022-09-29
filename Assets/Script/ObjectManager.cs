@@ -17,8 +17,13 @@ public class ObjectManager : MonoBehaviour
     GameObject Enemy;
 
 
+<<<<<<< HEAD
     void Start()
     {   
+=======
+    void Awake()
+    {
+>>>>>>> 13b93d0a0fce4fff483e6929bb8aab4e4d550c38
         BlueCircle = new GameObject[10];
         RedCircle = new GameObject[10];
         GreenSqure = new GameObject[10];
