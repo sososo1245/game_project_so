@@ -4,40 +4,48 @@ using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
-    private Vector2 mousePos;
-    private float length;
+    private Ray2D ray;
+    private RaycastHit2D hit;
+    private GameObject target = null;
 
-    // Start is called before the first frame update
     void Start()
     {
-        length = this.GetComponent<CircleCollider2D>().radius;
-
     }
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
+      if(Input.GetMouseButton(0)){
+        Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 0.0f));
-            if (Vector2.Distance(mousePos , this.transform.position) < length)
-            this.transform.position = mousePos;
-            
+        if(!target){
+          RaycastHit2D hit = Physics2D.Raycast(point, Vector2.zero);
+
+          if(hit.collider != null)
+          {
+            target = hit.collider.gameObject;
+            EnemyMove targetScript = target.GetComponent<EnemyMove>();
+            if(targetScript)
+                targetScript.enabled = false;
+
+            if(hit.collider.tag == "enemy"){
+              Debug.Log("너는 범인이야!");
+            } else{
+              Debug.Log("너는 시민이야!");
+            }
+          }
         }
-    }
-
-
-    // Update is called once per frame
-
-    private void OnTriggerStay2D(Collider2D mouse)
-    {
-        if (mouse.gameObject.tag == "Player")
-        {
-            this.transform.position = mouse.transform.position;
-            Debug.Log(this.transform.position);
-            Debug.Log(mouse.transform.position);
+      } else {
+        if(target) {
+          EnemyMove targetScript = target.GetComponent<EnemyMove>();
+          if(targetScript)
+                targetScript.enabled = true;
         }
+        target = null;
+      }
+
+      if(target){
+        Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.transform.position = new Vector3(point.x, point.y, 0);
+      }
     }
-    
 }

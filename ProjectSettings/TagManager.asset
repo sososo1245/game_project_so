@@ -9,6 +9,7 @@ TagManager:
   - left
   - bottom
   - sidewall
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Target
-  - 
+  - Montage
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: gameUI
+    uniqueID: 1548759649
     locked: 0

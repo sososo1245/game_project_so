@@ -4,83 +4,40 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    public float Speed = 1.0f;
+    public float LimitTime = 3.0f;
 
-    public GameObject BlueCirclePrefab;
-    public GameObject RedCirclePrefab;
-    public GameObject GreenSqurePrefab;
-    
+    private Vector2 direction = Vector2.zero;
+    private float time = 0f;
 
-
-    public float nextMove;//행동지표를 결정할 변수
-    public float max;
-    public float min;
-    public float speed = 1.0f;
-    private Transform target;
-    private float multiple;
-    private float toward;
-    private float direction;
-    private Vector2 moving;
-    [SerializeField] private float downspeed;
-
-
-
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        //rigid = GetComponent<Rigidbody2D>();
-        //transform.position = new Vector3(0.0f, 0.0f, 0.0f);
-
-        //nextMove = Random.Range(-2.0f, 2.0f);
-        //multiple = Random.Range(max, min);
-
-        Invoke("Think", 0);
+    void Start(){
+        GenerateDirection();
     }
 
-
-
-
-    // Update is called once per frame
     void Update()
     {
-        Vector2 pos = this.transform.position;
-        pos += moving * Time.deltaTime;
-        this.transform.position = pos; 
+        time += Time.deltaTime;
 
+        if(time >= LimitTime){
+            time = 0f;
 
-    }
-
-    void Think()
-    {
-
-        moving = new Vector2(Random.Range(-5f, +5f), Random.Range(downspeed, 0f));
-        Invoke("Think", 3);//재귀
-
-        
-    }
-
-    private void OnTriggeStay2D(Collider2D coll)
-    {
-        if (coll.tag == "sidewall")
-        {
-            moving.x *= -1.0f;
-            Debug.Log("coll");
+            GenerateDirection();
         }
 
-
+        this.transform.Translate(direction * Speed * Time.deltaTime);
     }
 
-    private void OnCollisionStay2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "sidewall")
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "sidewall")
         {
-            moving.x *= -1.0f;
-           
+          direction *= -1;
         }
-
-        Debug.Log("coll");
-
     }
 
+    private void GenerateDirection(){
+        float randomX = Random.Range(-1.0f, 1.0f);
+        float randomY = Random.Range(-1.0f, 1.0f);
 
+        direction = new Vector2(randomX, randomY);
+    }
 }
